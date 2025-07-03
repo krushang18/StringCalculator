@@ -29,5 +29,13 @@ class StringCalculatorTest {
 	void testNArgsWithComma() {
 		assertEquals(10, StringCalc.add("1,2,3,4"));
 	}
+	@Test
+	void testNArgsWithSemiColon() {
+		assertEquals(18, StringCalc.add("4;5;4;5"));
+	}
+	@Test
+	void testNArgsWithCommaAndSemiColon() {
+		assertEquals(19, StringCalc.add("4,8;3,4"));
+	}
 
 }
