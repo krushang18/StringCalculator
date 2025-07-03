@@ -7,7 +7,13 @@ public class StringCalculator {
 			return 0;
 		}
 		
-		int arg1 = Integer.parseInt(s);
-		return arg1;
+		if(s.length() == 1) {
+			int arg1 = Integer.parseInt(s);
+			return arg1;
+		}
+		
+		String args[] = s.split(",");
+		int sum = Integer.parseInt(args[0]) + Integer.parseInt(args[1]);
+		return sum;
 	}
 }

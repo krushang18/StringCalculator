@@ -21,5 +21,9 @@ class StringCalculatorTest {
 	void testSingleArg() {
 		assertEquals(1, StringCalc.add("1"));
 	}
+	@Test
+	void testTwoArgsWithComma() {
+		assertEquals(3, StringCalc.add("1,2"));
+	}
 
 }
