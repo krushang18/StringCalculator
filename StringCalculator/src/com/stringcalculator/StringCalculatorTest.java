@@ -25,5 +25,9 @@ class StringCalculatorTest {
 	void testTwoArgsWithComma() {
 		assertEquals(3, StringCalc.add("1,2"));
 	}
+	@Test
+	void testNArgsWithComma() {
+		assertEquals(10, StringCalc.add("1,2,3,4"));
+	}
 
 }
