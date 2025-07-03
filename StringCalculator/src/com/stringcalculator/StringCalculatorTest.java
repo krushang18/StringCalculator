@@ -17,5 +17,9 @@ class StringCalculatorTest {
 	void testEmpty() {
 		assertEquals(0, StringCalc.add(""));
 	}
+	@Test
+	void testSingleArg() {
+		assertEquals(1, StringCalc.add("1"));
+	}
 
 }
