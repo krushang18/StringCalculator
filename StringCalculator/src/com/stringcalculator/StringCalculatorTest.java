@@ -45,5 +45,9 @@ class StringCalculatorTest {
 	void testNArgsWithNewLineNoComma() {
 		assertEquals(19, StringCalc.add("4\n8\n3,4"));
 	}
+	@Test
+	void testNArgsWithNewDelimiters() {
+		assertEquals(19, StringCalc.add("//;4\n8\n3,4"));
+	}
 
 }

@@ -17,6 +17,9 @@ public class StringCalculator {
 		String args[] = s.split("[,;\\n]+");
 		int sum = 0;
 		for(String arg : args) {
+			if (arg.equals("//")) {
+                continue;
+            }
 			sum += Integer.parseInt(arg);
 		}
 		return sum;
