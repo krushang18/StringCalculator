@@ -37,5 +37,13 @@ class StringCalculatorTest {
 	void testNArgsWithCommaAndSemiColon() {
 		assertEquals(19, StringCalc.add("4,8;3,4"));
 	}
+	@Test
+	void testNArgsWithNewLine() {
+		assertEquals(19, StringCalc.add("4,\n8;\n3,4"));
+	}
+	@Test
+	void testNArgsWithNewLineNoComma() {
+		assertEquals(19, StringCalc.add("4\n8\n3,4"));
+	}
 
 }
