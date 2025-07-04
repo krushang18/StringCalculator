@@ -33,11 +33,12 @@ public class StringCalculator {
 		//if negative numbers exist throw ERROR
 		if(!negativeNumbers.isEmpty()) {
 			StringBuilder sb = new StringBuilder();
-            for (int n : negativeNumbers) {
-                sb.append(n);
-                sb.append(',');
-            }
-            sb.deleteCharAt(sb.length() - 1);
+			for (int n : negativeNumbers) {
+		                sb.append(n);
+		                sb.append(',');
+		        }
+		        sb.deleteCharAt(sb.length() - 1);			
+		            
 			throw new NegativeNumberException("negative numbers not allowed "+sb.toString());
 		}
 		
