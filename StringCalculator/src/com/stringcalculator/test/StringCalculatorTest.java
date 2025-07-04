@@ -1,9 +1,12 @@
-package com.stringcalculator;
+package com.stringcalculator.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.stringcalculator.StringCalculator;
+import com.stringcalculator.exception.NegativeNumberException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 
 class StringCalculatorTest {
 	StringCalculator StringCalc;
@@ -49,5 +52,21 @@ class StringCalculatorTest {
 	void testNArgsWithNewDelimiters() {
 		assertEquals(19, StringCalc.add("//;4\n8\n3,4"));
 	}
+	
+	@Test
+	public void testNegativeArgs() {
+	    try {
+	    	StringCalc.add("1,-2,3,-4,-9");
+	    	fail("Expected exception was not thrown");
+	    } catch (NegativeNumberException e) {
+	        assertEquals("negative numbers not allowed -2,-4,-9", e.getMessage());
+	    }
+	}
+	
+	@Test
+	void testBiggerThanThousand() {
+		assertEquals(1002, StringCalc.add("2,1001,1000"));
+	}
+	
 
 }
